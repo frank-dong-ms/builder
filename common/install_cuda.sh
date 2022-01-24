@@ -130,9 +130,10 @@ function install_111 {
     # install CUDA 11.1 in the same container
     wget -q https://developer.download.nvidia.com/compute/cuda/11.1.1/local_installers/cuda_11.1.1_455.32.00_linux.run
     chmod +x cuda_11.1.1_455.32.00_linux.run
-    ./cuda_11.1.1_455.32.00_linux.run --toolkit --silent
+    ./cuda_11.1.1_455.32.00_linux.run --toolkit
     rm -f cuda_11.1.1_455.32.00_linux.run
     rm -f /usr/local/cuda && ln -s /usr/local/cuda-11.1 /usr/local/cuda
+    dir /usr/local/cuda-11.1/targets/x86_64-linux/lib/
 
     # install CUDA 11.1 CuDNN 8.0.5
     # cuDNN license: https://developer.nvidia.com/cudnn/license_agreement
